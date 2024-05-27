@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading App Personal Solution</title>
+    <script>
+        var x = parseInt(prompt("Enter marks in JavaScript:"));
+        var y = parseInt(prompt("Enter marks in Java"));
+        var z = parseInt(prompt("Enter marks in .Net"));
+
+        if( x == 35){
+            document.write("Javascript: " + x + " pass" + "</br>");
+        }else if( x > 35 && x <= 59){
+            document.write("Javascript: " + x + " C" + "</br>");
+        }else if(x > 59 && x <= 69){
+            document.write("Javascript: " + x + " B" + "</br>");
+        }else if(x > 69){
+            document.write("Javascript: " + x + " A" + "</br>");
+        }else{
+            document.write("Javascript: " + x + " Fail" + "</br>");
+        }
+
+        if( y == 35){
+            document.write("Java: " + y + " pass" + "</br>");
+        }else if( y > 35 && y <= 59){
+            document.write("Java: " + y + " C" + "</br>");
+        }else if(y > 59 && y <= 69){
+            document.write("Java: " + y + " B" + "</br>");
+        }else if(y > 69){
+            document.write("Java: " + y + " A" + "</br>");
+        }else{
+            document.write("Java: " + y + " Fail" + "</br>");
+        }
+
+        if( z == 35){
+            document.write(".Net: " + z + " pass" + "</br>");
+        }else if( z > 35 && z <= 59){
+            document.write(".Net: " + z + " C" + "</br>");
+        }else if(z > 59 && z <= 69){
+            document.write(".Net: " + z + " B" + "</br>");
+        }else if(z > 69){
+            document.write(".Net: " + z + " A" + "</br>");
+        }else{
+            document.write(".Net: " + z + " Fail" + "</br>");
+        }
+    </script>
+</head>
+<body>
+
+    <!--Enter marks for Javascript, Java and .Net
+        35 is passed, between 35 and 59 its a C, between 59 and 69 is a B and more than 69 is an A, also, less than 35 
+        is a Fail-->
+    
+</body>
+</html>

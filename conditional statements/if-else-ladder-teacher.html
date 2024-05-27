@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading App by Teacher</title>
+    <script>
+        var javascriptmarks = parseInt(prompt("Enter the JS Marks"));
+        var javamarks = parseInt(prompt("Enter Java Marks"));
+        var dotnetmarks = parseInt(prompt("Enter .Net Marks"));
+
+        var total = javascriptmarks + javamarks + dotnetmarks;
+        document.write("Total marks: " + total);
+        
+        var average = total / 3;
+        document.write("Average: " + average);
+        
+        if(javascriptmarks >= 35 && javamarks >= 35 && dotnetmarks >= 35){
+            document.write("Result: Passed");
+            if(average >= 35 && average < 60){
+                document.write("Grade: C");
+            }else if(average >= 60 && average < 70){
+                document.write("Grade: B");
+            }else{
+                document.write("Grade: A");
+            }
+        }else{
+            document.write("Result: Failed");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
