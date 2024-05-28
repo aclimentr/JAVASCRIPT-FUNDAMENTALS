@@ -10,13 +10,13 @@
         var dotnetmarks = parseInt(prompt("Enter .Net Marks"));
 
         var total = javascriptmarks + javamarks + dotnetmarks;
-        document.write("Total marks: " + total);
+        document.write("Total marks: " + total + "<br/>");
         
         var average = total / 3;
-        document.write("Average: " + average);
+        document.write("Average: " + average + "<br/>");
         
         if(javascriptmarks >= 35 && javamarks >= 35 && dotnetmarks >= 35){
-            document.write("Result: Passed");
+            document.write("Result: Passed" + "<br/>");
             if(average >= 35 && average < 60){
                 document.write("Grade: C");
             }else if(average >= 60 && average < 70){
@@ -25,7 +25,7 @@
                 document.write("Grade: A");
             }
         }else{
-            document.write("Result: Failed");
+            document.write("Result: Failed" + "</br>");
         }
     </script>
 </head>
