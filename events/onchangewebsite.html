@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onChange event</title>
+    <script>
+        function handleOnChangeEvent(x){
+            window.location = x;
+        }
+    </script>
+</head>
+<body>
+    <select onChange="handleOnChangeEvent(this.value)">
+        <option value="">Select a website</option>
+        <option value="http://www.victorroblesweb.es">VictorroblesWeb</option>
+        <option value="http://www.google.com">Google</option>
+    </select>
+</body>
+</html>
