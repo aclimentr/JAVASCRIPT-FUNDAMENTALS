@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <!--Create a function which it prompts the professor to 
+    enter the marks of Maths, Physics and Chemistry, calculate
+    the average. If the average is less than 70 -> C Grade, 
+    between 70 and 90 -> B Grade, More than 90 -> A Grade-->
+    <script>
+        function gradeCalculator(){
+            var maths = parseInt(prompt("Enter the marks of Maths"));
+            var physics = parseInt(prompt("Enter the marks of Physics"));
+            var chem = parseInt(prompt("Enter the marks of Chem"));
+
+            function averagecalc(){
+                var sum = maths + physics + chem;
+                var average = sum / 3;
+                document.write("The average mark is: " + average + "</br>");
+                
+                function asignMarks(){
+                    var grade1 = "C";
+                    var grade2 = "B";
+                    var grade3 = "A";
+                    
+                    if(average < 70){
+                        document.write("</br>" + "Grade: " + grade1);
+                    }else if(average >= 70 && average <= 90){
+                        document.write("</br>" + "Grade: " + grade2);
+                    }else{
+                        document.write("</br>" + "Grade: " + grade3);
+                    }
+                }
+                return asignMarks();
+            }
+            return averagecalc();
+        }
+
+        gradeCalculator(); 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

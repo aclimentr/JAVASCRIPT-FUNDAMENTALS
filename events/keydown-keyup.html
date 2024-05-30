@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keydown - keyup</title>
+    <script>
+        function handleOnKeyDown(x){
+            x.style.color = "yellow";
+            x.style.backgroundColor = "black";
+
+        }
+        const handleOnKeyUp = (x) => {
+            x.style.color = "black";
+            x.style.backgroundColor = "white";
+        }
+        function handleOnKeyPress(x){
+            x.style.color = "white";
+            x.style.backgroundColor = "purple";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeydown="handleOnKeyDown(this)" onkeyup="handleOnKeyUp(this)" onkeypress="handleOnKeyPress(this)" />
+</body>
+</html>
