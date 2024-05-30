@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>setinterval function</title>
     <script>
-        
+        function continuousDisplay(){
+            //setTimeout: once
+            var x = setInterval( displayDate, 1000 );
+            //clearInterval
+        }
+        function stopInterval(){
+            x = stopInterval(continuousDisplay);
+        }
+
+        function displayDate(){
+            var d = new Date();
+            var x = d.toLocaleString();
+            document.getElementById("dateinfo").innerHTML = x;
+        }
     </script>
 </head>
-<body>
-    
+<body onload="continuousDisplay()">
+    Current Date: <br/>
+    <p id="dateinfo"></p>
+    <button type="button" value="stop" onclick="stopInterval()">Stop Interval</button>
 </body>
 </html>
