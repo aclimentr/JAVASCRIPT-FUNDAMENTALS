@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM:HTML</title>
+    <script>
+        function handleHTML(){
+            document.getElementById("para1").align = "center";
+            document.getElementById("img1").src = "descarga.png";
+        }
+        function returnFirstImage(){
+            document.getElementById("para1").align = "start";
+            document.getElementById("img1").src = "images.png";
+        }
+    </script>
+</head>
+<body>
+    <p id="para1">Alvaro</p>
+    <img src="images.png" id="img1"/>
+    <button type="button" id="btn1" onclick="handleHTML()"
+    ondblclick="returnFirstImage()">Cambiar imagen</button>
+</body>
+</html>

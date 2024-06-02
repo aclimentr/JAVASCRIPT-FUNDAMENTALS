@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+        <script>
+            function handleAdd(){
+                var parent = document.getElementById("div1");
+                var child = document.createElement("p");
+                var tv = document.createTextNode("TV - 500€");
+                child.appendChild(tv);
+                parent.appendChild(child);
+            }
+
+            function handleDelete(){
+                var parent = document.getElementById("div1");
+                var child = document.getElementById("cellphone");
+                parent.removeChild(child);
+                setTimeout(timeDeleted, 3000); //I did this just to practice, i know the assignment didnt ask for it
+                function timeDeleted(){
+                    child.style.color = "red";
+                    parent.appendChild(child);
+                }
+
+            }
+        </script>
+</head>
+<body>
+    <div id="div1">
+        <p id="laptop">Laptop - 1000€</p>
+        <p id="cellphone">Cellphone - 300€</p>
+    </div>
+    <input type="button" id="btn1" value="Add" onclick="handleAdd()"/>
+    <input type="button" id="btn2" value="Delete" onclick="handleDelete()"/>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM: Create and Remove Nodes</title>
+    <script>
+        function handleRemove(){
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p2");
+            parent.removeChild(child);
+            // setTimeout(handleAppend, 3000);
+            // function handleAppend(){
+            //     parent.appendChild(child);
+            // }
+        }
+        function handleCreate() {
+            var parent = document.getElementById("div1");
+            var child = document.createElement("p");
+            var text = document.createTextNode("I am new in here");
+            child.appendChild(text);
+
+            parent.appendChild(child);
+        }
+    </script>
+</head>
+<body>
+    
+    <div id="div1">
+        <p id="p1">This is the first paragraph</p>
+        <p id="p2">This is the second paragraph</p>
+    </div>
+    <input type="button" value="remove" onclick="handleRemove()"/>
+    <input type="button" value="create" onclick="handleCreate()"/>
+</body>
+</html>
