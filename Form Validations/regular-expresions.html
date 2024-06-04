@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expresions theory syntax</title>
+
+</head>
+<body>
+    <h1>REGULAR EXPRESIONS SYNTAX</h1>
+    <ul>Brackets:
+        <li><b>[...]</b>  Any one character in the brackets</li>
+        <li><b>[^...]</b>  Any one character not in the  brackets</li>
+        <li><b>[0-9]</b>  Matches any decimal digit from 0 though 9</li>
+        <li><b>[a-z]</b>  Matches any character from lowercase a to z</li>
+        <li><b>[A-Z]</b>  Matches any character from uppercase A to Z</li>
+    </ul>    
+    <ul>Quantifiers
+        <li><b>x+</b>   It matches any string containing one or more x's</li>
+        <li><b>x*</b>   It matches any string containing zero or more x's</li>
+        <li><b>x{N}</b>   It matches any string containing a sequence of N x's</li>
+        <li><b>x{3,5}</b>   Minimum 3 x's and maximum 5 x's It matches any string containing a sequence of at least two x's</li>
+        <li><b>x$</b>   It matches any string with a x at the end of it</li>
+        <li><b>^x</b>   It matches any string with x at the beginning of it</li>
+    </ul>
+    <ul>Metacharacters
+        <li><b>.</b>   a single character</li>
+        <li><b>\s</b>   a whitespace character (space, tab, newline)</li>
+        <li><b>\S</b>  non-whitespace character</li>
+        <li><b>\d</b>  a digit(0-9)</li>
+        <li><b>\D</b>  a non-digit</li>
+        <li><b>\w</b>  a word character (a-z, A-Z, 0-9, _)</li>
+
+    </ul>
+    <ul>Modifiers
+        <li><b>i</b>  Perform case-insensitive matching</li>
+        <li><b>g</b>   Perform a global match (find all)</li>
+        <li><b>m</b>   Perform multiline matching</li>
+        <li><b>d</b>   Perform start and end matching </li>
+    </ul>
+</body>
+</html>

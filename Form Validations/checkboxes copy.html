@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating Checkboxes</title>
+    <script>
+        function getCheckBoxes(){
+            var x = document.input.checked;
+            document.write(x);
+        }
+    </script>
+</head>
+<body>
+    <h3>Select a color:</h3>
+    <form name="myform" onsubmit="getCheckBoxes()">
+        <input type="checkbox" id="javascript" value="JavaScript"/>JavaScript
+        <input type="checkbox" id="jquery" value="JQuery"/> JQuery
+        <input type="checkbox" id="angularjs" value="AngularJS"/> AngularJS
+        <input type="checkbox" id="nodejs" value="NodeJS"/> NodeJS
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

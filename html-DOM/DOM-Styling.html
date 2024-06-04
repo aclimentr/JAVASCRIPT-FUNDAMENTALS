@@ -5,14 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM:Styling</title>
     <script>
+
         function handleCSS(){
+
             document.getElementById("para1").style.color = "red";
             document.getElementById("para1").style.backgroundColor = "yellow";
-            
         }
+        function changeColor1(){
+
+            document.getElementById("para1").style.color = "black";
+            document.getElementById("para1").style.backgroundColor = "lightgreen"; 
+            setTimeout(writeNewParagraph, 2000);
+
+            function writeNewParagraph(){
+
+                var parent = document.getElementById("body1");
+                var child = document.createElement("p");
+                var txt = document.createTextNode("I am new here");
+                
+                child.appendChild(txt);
+                parent.appendChild(child);
+                setTimeout(() => {
+                    parent.removeChild(child);
+                    handleCSS();
+                }, 2000);
+            }
+        }
+
     </script>
+    
 </head>
-<body onload="handleCSS()">
-    <p id="para1">May The Force Be With You</p>
-</body>
+<body id="body" onload="handleCSS()">
+    
+    <div id="body1">
+
+        <p id="para1">May The Force Be With You</p>
+
+    </div>
+
+        <input type="button" value="click me" onclick="changeColor1()"/>
+    
+    </body>
 </html>

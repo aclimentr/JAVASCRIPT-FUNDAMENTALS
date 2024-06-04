@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Register Validation Exercise</title>
+    <script>
+        function validate(){
+            var email = document.myform.email.value;
+            var password = document.myform.password.value;
+            var phone = document.myform.phone.value;
+
+            if(email == ""){
+                alert("Please enter a valid email");
+                document.myform.email.focus();
+                return false;
+            }else if(password == ""){
+                alert("Please enter a valid password");
+                document.myform.password.focus();
+                return false;
+            }else if(phone == ""){
+                alert("Please enter a valid phone");
+                document.myform.phone.focus();
+                return false;
+            }
+
+            var emailexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var emailresult = emailexp.test(email);
+            if(!emailresult){
+                alert("Invalid email");
+                document.getElementById("emailerr").innerHTML = "Try with a new email";
+                document.myform.email.focus();
+                return false;
+            }
+
+            var passwordexp = /^[A-Za-z0-9\s]{5,8}$/;
+            var passwordresult = passwordexp.test(password);
+            if(!passwordresult){
+                alert("Invalid password");
+                document.getElementById("passworderr").innerHTML = "Try with a new password";
+                document.myform.password.focus();
+                return false;
+            }
+
+            var phoneexp = /^[0-9]{9,10}$/;
+            var phoneresult = phoneexp.test(phone);
+            if(!phoneresult){
+                alert("Invalid phone");
+                document.getElementById("phoneerr").innerHTML = "Try with a new phone";
+                document.myform.phone.focus();
+                return false;
+            }
+
+            alert("validation successful");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h3>User Register</h3>
+    <form name="myform" action="dropdown.php" onsubmit="return validate()">
+        <input type="text" name="email" placeholder="Email"/>
+        <b id="emailerr"></b><br/>
+        <input type="password" name="password" placeholder="Password"/>
+        <b id="passworderr"></b><br/>
+        <input type="text" name="phone" placeholder="Phone number"/>
+        <b id="phoneerr"></b><br/>
+
+        <input type="submit" value="submit"/>
+    </form>
+
+</body>
+</html>
