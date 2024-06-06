@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Singleton Object</title>
+    <script>
+        var blogpost = new function(){
+            this.title = "Ruby on Rails",
+            this.text = "Rapid web development",
+            this.displayDetails = function(){
+                document.write(this.title + "<br/>");
+                document.write(this.text);
+            }
+        }
+
+        blogpost.displayDetails();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Object Creating Using Literal Constructor</title>
+    <script>
+        var blogpost = {
+            title:"Java",
+            text:"Is an Object Oriented Language",
+            displayDetails:function(){
+                document.write(this.title + "<br/>");
+                document.write(this.text);
+            }
+        }
+        document.write("<h3>Creating Objects with Literal Constructors</h3>");
+        blogpost.displayDetails();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
