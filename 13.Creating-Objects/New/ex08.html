@@ -5,20 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Object</title>
     <script>
-        var product = {
-            id: "01",
-            name: "Cacahuete",
-            description: "Relleno de avellana",
-            price: 3,
-            displayProductDetails:function(){
-                document.write(this.id + "<br/>");
-                document.write(this.name + "<br/>");
-                document.write(this.description + "<br/>");
-                
-            }
+        function product(id, name, description, price){
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.price = price;
+            this.productDiscounted = productDiscounted;
+            this.displayProductDetails = displayProductDetails;
         }
-    
-    </script>
+
+        function displayProductDetails(){
+            document.write("Id:" + " " + this.id + "<br/>");
+            document.write("Name:" + " "  + this.name + "<br/>");
+            document.write("Description:" + " "  + this.description + "<br/>");
+            document.write("Price:" + " " + this.price + "€" + "<br/>");
+        }
+       
+        function productDiscounted(){
+            var x = parseFloat(this.price);
+            var discount = 0.20; //20% discount
+            var disc = x * discount;
+            discountedPrice = x - disc; 
+            document.write("Special price:" + " "  + discountedPrice + "€" + "<br/>");
+        }
+       
+
+        var prd1 = new product("23","Aguacate","Relleno de fresa",3);
+        prd1.displayProductDetails();
+        prd1.productDiscounted();
+</script>
     <!-- Crear un objeto Product con Id, Name, Description 
     y Price. 
     Crear una función displayProductDetails que muestre
